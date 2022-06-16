@@ -1,0 +1,92 @@
+body{
+    background-color: #f4f4f4;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.container{
+width: 80%;
+margin: auto;
+overflow: hidden;           /* no scroll bars even if something goes outside its container */
+}
+
+#main-header{
+    background-color: coral;
+    color: #fff;
+
+}
+
+#navbar{
+    background-color: #333;
+    color: #fff;
+}
+
+#navbar ul{
+    padding: 0px;
+    list-style: none;
+}
+
+#navbar li{
+    display: inline;
+}
+
+#navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+#showcase{
+    background-image: url(img/showcase.jpg);
+    background-position: center right;
+    min-height:300px;           /* by making this the MINIMUM height, this allows it to be responsive and adjust height accordingly */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#showcase h1{
+    color: white;
+    font-size: 50px;
+    line-height: 1.6em;
+    padding-top: 30px;
+}
+
+#main{
+    float: left;
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+#sidebar{
+    float: right;
+    width: 30%;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#main-footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media(max-width:600px){            /* this media query has a condition where anything we put here will only be in effect if it's under 600px */
+    #main{
+        width: 100%;                /* this makes it so that when the window is too small, the main and sidebar containers will take up the whole window instead of being floated next to each other */
+        float: none;
+    }
+
+    #sidebar{
+        width: 100%;
+        float: none;
+    }
+}
